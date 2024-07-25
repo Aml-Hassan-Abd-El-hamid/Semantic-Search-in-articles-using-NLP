@@ -22,7 +22,8 @@ The first purpose of finding such a dataset for this project is testing, I belie
 
 There were multiple types of datasets that I found during my hunt and although most of them don't really meet the criteria that I already started with! I still like to mention some them right here for future use
 
-Dataset Name | link | desc | size
---- | --- | --- | ---
-arXiv Dataset | https://www.kaggle.com/datasets/Cornell-University/arxiv | That dataset contains lots of interesting features including: article titles, authors, categories, abstracts, full-text PDFs | 1.7 million articles
-Wikipedia SQLITE Portable DB | https://www.kaggle.com/datasets/christernyc/wikipedia-sqlite-portable-db-huge-5m-rows/data | 
+Dataset Name | link | desc | size | language
+--- | --- | --- | --- | --- 
+arXiv Dataset | https://www.kaggle.com/datasets/Cornell-University/arxiv | That dataset contains lots of interesting features including: article titles, authors, categories, abstracts, full-text PDFs | 1.7 million articles | eng
+Wikipedia SQLITE Portable DB | https://www.kaggle.com/datasets/christernyc/wikipedia-sqlite-portable-db-huge-5m-rows/data | Huge dataset organized in a SQLITE DB of wiki article, the dataset contain the tiltle of the article and the labels assoiated with it whic I can belive can be used as quires | over 5 million rows of data | eng
+Movies Similarity | https://www.kaggle.com/datasets/devendra45/movies-similarity | I belive the movie title and genere can be used as a query while the wiki plot and the imdb plot can be used as the articles assoitated with those queries<br><br> Isn't there any similar data for Arabic language | 100 samples | eng
