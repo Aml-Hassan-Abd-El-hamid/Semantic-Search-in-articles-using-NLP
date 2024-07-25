@@ -20,4 +20,9 @@ Like any other good NLP project, I started this one by hunting for a suitable da
 
 The first purpose of finding such a dataset for this project is testing, I believe there are plenty of out-of-the-box models that can do this task very well, but the questions here were: 1- which one is better? 2- Do we need to train/fine-tune our own model? 
 
-There were multiple types of datasets that I found during my hunt and although most of them don't really meet the criteria that I already started with! I still like to mention them right here for future use
+There were multiple types of datasets that I found during my hunt and although most of them don't really meet the criteria that I already started with! I still like to mention some them right here for future use
+
+Dataset Name | link | desc | size
+--- | --- | --- | ---
+arXiv Dataset | https://www.kaggle.com/datasets/Cornell-University/arxiv | That dataset contains lots of interesting features including: article titles, authors, categories, abstracts, full-text PDFs | 1.7 million articles
+Wikipedia SQLITE Portable DB | https://www.kaggle.com/datasets/christernyc/wikipedia-sqlite-portable-db-huge-5m-rows/data | 
