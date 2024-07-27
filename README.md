@@ -19,6 +19,7 @@ You can assume that the task is general, so people could search using keywords o
 
 You can implement it in Arabic or english. 
 ```
+Given those descriptions, this problem can be described as an **asymmetric semantic search** problem.
 ## Dataset
 
 Like any other good NLP project, I started this one by hunting for a suitable dataset, the criteria that I was aspiring for in that dataset was to have queries corresponding tied to some article/s.
@@ -36,6 +37,10 @@ Movies Similarity | https://www.kaggle.com/datasets/devendra45/movies-similarity
 I was asked to answer this question by Cyshield: **What was the biggest challenge you faced when carrying out this project?** and I want to say that the biggest challenge of that task was to find a suitable testing dataset, every dataset got its own issue, for example, if I used the movies dataset to test, assuming that: query = movie title and answer = movie plot, I would be ignoring the fact that some movies got a name that's not that relevant to its plot or maybe worse, may the name of the movie is mentioned inside the plot directly, Same thing for the articles datasets, if every article's title = the query and the article = the answer.<br>
 Also, I think that each article can be associated with multiple queries, for example, it would make much sense for an article about chatGPT titled "chatGPT and the effect of AI on the modern world" to have multiple queries highlighting different keywords like (machine learning, statistical learning, Artificial intelligence, Natural language processing, transformers) not a single query that's just the title of the article!<br>
 But since building such a dataset can take so much time and effort and I can't find one out of the box, I decided to go ahead with what I have and build a testing dataset that's composed of multiple parts of different datasets, including the movies and the other articles dataset.
+
+## Useful references:
+- https://subirverma.medium.com/semantic-search-with-s-bert-is-all-you-need-951bc710e160
+
 
 ## To do:
 1 - Build/find a better testing dataset. 
