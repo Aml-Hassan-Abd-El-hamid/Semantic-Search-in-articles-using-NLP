@@ -13,7 +13,7 @@ Description
 ▪Feel free to use any technique of feature extraction .
 ✓ U can use Deep Learning Methods and show the diff and which one the best.(optional)
 ```
-I wrote an email for the company for more clarification, and received this response:
+I wrote an email to the company for more clarification, and received this response:
 ```
 You can assume that the task is general, so people could search using keywords or using a sentence that represents what he wants to retrieve. you can implement any one of them and we will discuss other possible solutions for the problems. 
 
@@ -33,7 +33,7 @@ Dataset Name | link | desc | size | language
 arXiv Dataset | https://www.kaggle.com/datasets/Cornell-University/arxiv | That dataset contains lots of interesting features including article titles, authors, categories, abstracts, full-text PDFs | 1.7 million articles | eng
 xlsum | https://huggingface.co/datasets/csebuetnlp/xlsum | The dataset contains various articles from the BBC news, each sample include the title which can be used a query and the article which can be used as the answer of that query | 1.35 million samples | 45 languages, ar, eng
 Wikipedia SQLITE Portable DB | https://www.kaggle.com/datasets/christernyc/wikipedia-sqlite-portable-db-huge-5m-rows/data | Huge dataset organized in an SQLite DB of a wiki article, the dataset contains the title of the article and the labels associated with it which I believe it can be used as queries | over 5 million rows of data | eng
-Movies Similarity | https://www.kaggle.com/datasets/devendra45/movies-similarity | I believe the movie title and genre can be used as a query while the wiki plot and the IMDb plot can be used as the articles associated with those queries<br><br> Isn't there any similar data for Arabic language | 100 samples | eng
+Wikipedia Movie Plots | https://www.kaggle.com/datasets/jrobischon/wikipedia-movie-plots | I believe the movie title and genre can be used as queries while the wiki plot and the IMDb plot can be used as the articles associated with those queries<br><br> Isn't there any similar data for Arabic language | 34,886 samples | eng
 mr-tydi | https://huggingface.co/datasets/castorini/mr-tydi | this dataset is designed for monolingual retrieval, specifically to evaluate ranking with learned dense representations, each sample of this dataset contains a query, a positive message associated with that query and multiple negative passages<br><br> if insted of passages we had full articles, that would be the perfect dataset for this task :) | 48,729 samples | 11 languages in total, ar, eng
 
 I was asked to answer this question by Cyshield: **What was the biggest challenge you faced when carrying out this project?** and I want to say that the biggest challenge of that task was to find a suitable testing dataset, every dataset got its own issue, for example, if I used the movies dataset to test, assuming that: query = movie title and answer = movie plot, I would be ignoring the fact that some movies got a name that's not that relevant to its plot or maybe worse, may the name of the movie is mentioned inside the plot directly, Same thing for the articles datasets, if every article's title = the query and the article = the answer.<br>
