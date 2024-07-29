@@ -38,7 +38,8 @@ mr-tydi | https://huggingface.co/datasets/castorini/mr-tydi | this dataset is de
 
 I was asked to answer this question by Cyshield: **What was the biggest challenge you faced when carrying out this project?** and I want to say that the biggest challenge of that task was to find a suitable testing dataset, every dataset got its own issue, for example, if I used the movies dataset to test, assuming that: query = movie title and answer = movie plot, I would be ignoring the fact that some movies got a name that's not that relevant to its plot or maybe worse, may the name of the movie is mentioned inside the plot directly, Same thing for the articles datasets, if every article's title = the query and the article = the answer.<br>
 Also, I think that each article can be associated with multiple queries, for example, it would make much sense for an article about chatGPT titled "chatGPT and the effect of AI on the modern world" to have multiple queries highlighting different keywords like (machine learning, statistical learning, Artificial intelligence, Natural language processing, transformers) not a single query that's just the title of the article!<br>
-But since building such a dataset can take so much time and effort and I can't find one out of the box, I decided to go ahead with what I have and build a testing dataset that's composed of multiple parts of different datasets, including the movies and the other articles datasets.
+I tried to go for free automatic open-source tools like [GenQ](https://www.sbert.net/examples/unsupervised_learning/query_generation/README.html) but the results weren't really satisfying.
+
 
 ## Modelling
 That part is the actual fun part :)<br>
