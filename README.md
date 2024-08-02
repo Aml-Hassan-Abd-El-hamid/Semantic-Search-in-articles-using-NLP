@@ -53,8 +53,8 @@ Cause I already knew what I was going to do right away :) all that I had to do w
 Model | accuracy | size 
 --- | --- | --- 
 https://huggingface.co/flax-sentence-embeddings/multi-QA_v1-mpnet-asymmetri | 78.10 | 438 MB for each model.
-https://huggingface.co/sentence-transformers/msmarco-distilbert-base-dot-prod-v3 | - | 266 MB
-https://huggingface.co/sentence-transformers/msmarco-roberta-base-ance-firstp | - | 499 MB
+https://huggingface.co/sentence-transformers/msmarco-distilbert-base-dot-prod-v3 |  72.36% | 266 MB
+https://huggingface.co/sentence-transformers/msmarco-roberta-base-ance-firstp | 72.39% | 499 MB
 https://huggingface.co/sebastian-hofstaetter/distilbert-dot-tas_b-b256-msmarco | - | 265 MB
 
 ## Useful references:
