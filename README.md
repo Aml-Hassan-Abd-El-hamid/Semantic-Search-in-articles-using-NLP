@@ -50,8 +50,14 @@ Cause I already knew what I was going to do right away :) all that I had to do w
 3. Get the article with the highest similarity score with the query and see if it matches the query's original answer.
 4. Count how many answers were correct using that model's query and compare that count with the rest of the models.
 
+Model | accuracy | size 
+--- | --- | --- 
+https://huggingface.co/flax-sentence-embeddings/multi-QA_v1-mpnet-asymmetri | 78.10 | 438 MB for each model.
+https://huggingface.co/sentence-transformers/msmarco-distilbert-base-dot-prod-v3 | - | 266 MB
+
 ## Useful references:
 - https://subirverma.medium.com/semantic-search-with-s-bert-is-all-you-need-951bc710e160
+- https://sbert.net/examples/applications/semantic-search/README.html
 
 
 ## To do:
