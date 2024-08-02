@@ -54,10 +54,13 @@ Model | accuracy | size
 --- | --- | --- 
 https://huggingface.co/flax-sentence-embeddings/multi-QA_v1-mpnet-asymmetri | 78.10 | 438 MB for each model.
 https://huggingface.co/sentence-transformers/msmarco-distilbert-base-dot-prod-v3 | - | 266 MB
+https://huggingface.co/sentence-transformers/msmarco-roberta-base-ance-firstp | - | 499 MB
+https://huggingface.co/sebastian-hofstaetter/distilbert-dot-tas_b-b256-msmarco | - | 265 MB
 
 ## Useful references:
 - https://subirverma.medium.com/semantic-search-with-s-bert-is-all-you-need-951bc710e160
 - https://sbert.net/examples/applications/semantic-search/README.html
+- https://www.sbert.net/docs/pretrained-models/msmarco-v3.html
 
 
 ## To do:
