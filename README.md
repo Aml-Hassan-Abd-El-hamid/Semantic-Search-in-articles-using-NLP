@@ -38,13 +38,17 @@ mr-tydi | https://huggingface.co/datasets/castorini/mr-tydi | this dataset is de
 
 I was asked to answer this question by Cyshield: **What was the biggest challenge you faced when carrying out this project?** and I want to say that the biggest challenge of that task was to find a suitable testing dataset, every dataset got its own issue, for example, if I used the movies dataset to test, assuming that: query = movie title and answer = movie plot, I would be ignoring the fact that some movies got a name that's not that relevant to its plot or maybe worse, may the name of the movie is mentioned inside the plot directly, Same thing for the articles datasets, if every article's title = the query and the article = the answer.<br>
 Also, I think that each article can be associated with multiple queries, for example, it would make much sense for an article about chatGPT titled "chatGPT and the effect of AI on the modern world" to have multiple queries highlighting different keywords like (machine learning, statistical learning, Artificial intelligence, Natural language processing, transformers) not a single query that's just the title of the article!<br>
-I tried to go for free automatic open-source tools like [GenQ](https://www.sbert.net/examples/unsupervised_learning/query_generation/README.html) but the results weren't really satisfying.
+I tried to go for free automatic open-source tools like [GenQ](https://www.sbert.net/examples/unsupervised_learning/query_generation/README.html) but the results weren't really satisfying especially in the Arabic dataset.
 
 
 ## Modelling
 That part is the actual fun part :)<br>
 Why?<br>
-Cause I already knew what I was going to do right away, I had 2 options and I'm going to try both of them:
+Cause I already knew what I was going to do right away :) all that I had to do was to determine 1 thing: **The embedding model**, I had a very simple strategy to do that:
+1. Use the model to get the embeddings of all the articles and store them -usually in a vector database but for the start I'll go with the regular pandas column-
+2. Use the same model to get the embeddings of each query then measure the similarity score between that query embeddings and all the articles' embeddings.
+3. Get the article with the highest similarity score with the query and see if it matches the query's original answer.
+4. Count how many answers were correct using that model's query and compare that count with the rest of the models.
 
 ## Useful references:
 - https://subirverma.medium.com/semantic-search-with-s-bert-is-all-you-need-951bc710e160
