@@ -40,8 +40,9 @@ I was asked to answer this question by Cyshield: **What was the biggest challeng
 Also, I think that each article can be associated with multiple queries, for example, it would make much sense for an article about chatGPT titled "chatGPT and the effect of AI on the modern world" to have multiple queries highlighting different keywords like (machine learning, statistical learning, Artificial intelligence, Natural language processing, transformers) not a single query that's just the title of the article!<br>
 I tried to go for free automatic open-source tools like [GenQ](https://www.sbert.net/examples/unsupervised_learning/query_generation/README.html) but the results weren't really satisfying especially in the Arabic dataset.
 
+I chose to go with the **xlsum** dataset -English-, I used the title as the query and the corresponding article as the answer.
 
-## Modelling
+## Embedding model
 That part is the actual fun part :)<br>
 Why?<br>
 Cause I already knew what I was going to do right away :) all that I had to do was to determine 1 thing: **The embedding model**, I had a very simple strategy to do that:
@@ -49,6 +50,8 @@ Cause I already knew what I was going to do right away :) all that I had to do w
 2. Use the same model to get the embeddings of each query then measure the similarity score between that query embeddings and all the articles' embeddings.
 3. Get the article with the highest similarity score with the query and see if it matches the query's original answer.
 4. Count how many answers were correct using that model and compare that count with the rest of the models.
+
+The data that I used to test those different models were the first 1000 queries of the validation XLSUM dataset, while the answers that the model had to choose from were the entire no. of samples of validation XLSUM dataset which is around 11,000 samples. That was a tough test for the models and if you tried to lower the number of answers that the model had to choose from, that model would -in most cases- score higher accuracies.
 
 Model | accuracy | size | embedding length | distance metric
 --- | --- | --- | --- | ---
@@ -63,7 +66,8 @@ Given the above results, it's obvious that **e5** is the best model among all of
 
 ## Storage
 
-I was asked to answer this question by Cyshield: **What do you think you have learned from the project?** And even though I've got to use new and different models in that project, I also got to use a vector database for the very first time! I chose to go with **FAISS**  because there are a ton of resources explaining how to deal with it, and it seemed very easy to deal with.
+I was asked to answer this question by Cyshield: **What do you think you have learned from the project?** And even though I've got to use new and different models in that project, I also got to use a vector database for the very first time! I chose to go with **FAISS**  because there are a ton of resources explaining how to deal with it, and it seemed very easy to deal with.<br>
+I stored the test dataset -assuming that in our case this test dataset represents the production data while the validation dataset that I used to help me pick the embedding model is the development data- in the FAISS database.
 
 ## Useful references:
 - https://subirverma.medium.com/semantic-search-with-s-bert-is-all-you-need-951bc710e160
