@@ -48,19 +48,25 @@ Cause I already knew what I was going to do right away :) all that I had to do w
 1. Use the model to get the embeddings of all the articles and store them -usually in a vector database but for the start I'll go with the regular pandas column-
 2. Use the same model to get the embeddings of each query then measure the similarity score between that query embeddings and all the articles' embeddings.
 3. Get the article with the highest similarity score with the query and see if it matches the query's original answer.
-4. Count how many answers were correct using that model's query and compare that count with the rest of the models.
+4. Count how many answers were correct using that model and compare that count with the rest of the models.
 
-Model | accuracy | size 
---- | --- | --- 
-https://huggingface.co/flax-sentence-embeddings/multi-QA_v1-mpnet-asymmetri | 78.10% | 438 MB for each model.
-https://huggingface.co/sentence-transformers/msmarco-distilbert-base-dot-prod-v3 |  64.0% | 266 MB
-https://huggingface.co/sentence-transformers/msmarco-roberta-base-ance-firstp | 72.39% | 499 MB
-https://huggingface.co/sebastian-hofstaetter/distilbert-dot-tas_b-b256-msmarco | 44.1% | 265 MB
+Model | accuracy | size | embedding length | distance metric
+--- | --- | --- | --- | ---
+https://huggingface.co/sentence-transformers/msmarco-distilbert-base-dot-prod-v3 |  64.0% | 266 MB | 768 | Dot Product
+https://huggingface.co/sentence-transformers/msmarco-roberta-base-ance-firstp | 72.39% | 499 MB | 768 | Dot Product
+https://huggingface.co/SeyedAli/Multilingual-Text-Semantic-Search-Siamese-BERT-V1 | 71.39% | 90.9 MB | 384 | Dot Product
+https://huggingface.co/flax-sentence-embeddings/multi-QA_v1-mpnet-asymmetri | 78.10% | 438 MB for each model | 768 for each | Cosine Similarity
+https://huggingface.co/intfloat/e5-base-v2 | 85.3% | 438 MB | 768 | Dot Product
+https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2 | 54.2% | 539 MB | 512 | Cosine Similarity
+
+Given the above results, it's obvious that **e5** is the best model among all of them with a clear margin, but given its size and the fact that **Siamese-BERT** is much lighter and have an accuracy that's only 10% less than e5's, I decided to go with **Siamese-BERT** as my embedding model.
 
 ## Useful references:
 - https://subirverma.medium.com/semantic-search-with-s-bert-is-all-you-need-951bc710e160
 - https://sbert.net/examples/applications/semantic-search/README.html
 - https://www.sbert.net/docs/pretrained-models/msmarco-v3.html
+- https://huggingface.co/learn/nlp-course/chapter5/6?fw=tf
+- https://myscale.com/blog/mastering-data-science-cosine-similarity-vs-dot-product-insights/
 
 
 ## To do:
