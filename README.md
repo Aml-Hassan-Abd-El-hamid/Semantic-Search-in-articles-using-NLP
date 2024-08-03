@@ -59,7 +59,11 @@ https://huggingface.co/flax-sentence-embeddings/multi-QA_v1-mpnet-asymmetri | 78
 https://huggingface.co/intfloat/e5-base-v2 | 85.3% | 438 MB | 768 | Dot Product
 https://huggingface.co/sentence-transformers/distiluse-base-multilingual-cased-v2 | 54.2% | 539 MB | 512 | Cosine Similarity
 
-Given the above results, it's obvious that **e5** is the best model among all of them with a clear margin, but given its size and the fact that **Siamese-BERT** is much lighter and have an accuracy that's only 10% less than e5's, I decided to go with **Siamese-BERT** as my embedding model.
+Given the above results, it's obvious that **e5** is the best model among all of them with a clear margin, but given its size and the fact that **Siamese-BERT** is much lighter and has an accuracy that's only 10% less than e5's, I decided to go with **Siamese-BERT** as my embedding model.
+
+## Storage
+
+I was asked to answer this question by Cyshield: **What do you think you have learned from the project?** And even though I've got to use new and different models in that project, I also got to use a vector database for the very first time! I chose to go with **FAISS**  because there are a ton of resources explaining how to deal with it, and it seemed very easy to deal with.
 
 ## Useful references:
 - https://subirverma.medium.com/semantic-search-with-s-bert-is-all-you-need-951bc710e160
@@ -71,4 +75,5 @@ Given the above results, it's obvious that **e5** is the best model among all of
 
 ## To do:
 1 - Build/find a better testing dataset. 
+2- Fine-Tune Siamese-BERT.
 
