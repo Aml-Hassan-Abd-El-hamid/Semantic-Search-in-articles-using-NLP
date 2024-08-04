@@ -24,9 +24,7 @@ Given those descriptions, this problem can be described as an **asymmetric seman
 
 Like any other good NLP project, I started this one by hunting for a suitable dataset, the criteria that I was aspiring for in that dataset was to have queries corresponding tied to some article/s.
 
-The first purpose of finding such a dataset for this project is testing, I believe there are plenty of out-of-the-box models that can do this task very well, but the questions here were: 1- which one is better? 2- Do we need to train/fine-tune our own model? 
-
-There were multiple types of datasets that I found during my hunt and although most of them don't really meet the criteria that I already started with! I still like to mention some of them right here for future use
+There were multiple types of datasets that I found during my hunt and I like to mention some of them right here for future use
 
 Dataset Name | link | desc | size | language
 --- | --- | --- | --- | --- 
